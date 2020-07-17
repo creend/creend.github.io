@@ -1,0 +1,14 @@
+@mixin hamburger-menu() {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+@mixin before($top, $right, $bottom, $left) {
+  position: absolute;
+  content: '';
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
