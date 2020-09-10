@@ -1,4 +1,7 @@
-#Portfolio
+# Portfolio
+
 This is my portfolio page :)
-#Contact
+
+# Contact
+
 creend42@gmail.com
