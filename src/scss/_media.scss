@@ -38,7 +38,7 @@
   }
 
   .button {
-    padding: 15px 40px;
+    padding: 8px 20px;
     font-size: 0.75rem;
   }
 }
@@ -46,7 +46,7 @@
 @media (min-width:300px) {
   $footer-social-element-size: 45px;
 
-  .footer__social-element {
+  .footer__social-link {
     width: $footer-social-element-size;
     height: $footer-social-element-size;
     line-height: $footer-social-element-size;
@@ -77,7 +77,7 @@
 
   .button {
     font-size: 1.5rem;
-    padding: 25px 60px;
+    padding: 15px 30px;
   }
 
   .my-technologies {
@@ -90,10 +90,9 @@
       flex-basis: 40%;
       min-height: 260px;
     }
-
-    &__title {
-      flex-basis: 100%;
-    }
+  }
+  .title{
+    flex-basis: 100%;
   }
 
   .footer__social-element {
@@ -149,7 +148,7 @@
     }
 
     &::before {
-      @include before(auto, auto, 0, 0);
+      @include pseudoelement(auto, auto, 0, 0);
       display: block;
       width: 100%;
       height: 2px;
@@ -199,7 +198,7 @@
 
   .button {
     font-size: 1.75rem;
-    padding: 30px 70px;
+    padding: 20px 35px;
   }
 
   .my-technologies__technology {
@@ -209,12 +208,11 @@
 
 @media (min-width:1250px) {
   $footer-social-element-size: 60px;
-
-  .my-technologies__title {
+  .title {
     font-size: 2.5rem;
+    
   }
-
-  .my-technologies__technology {
+    .my-technologies__technology {
     flex-basis: 22%;
     min-height: 280px;
   }
@@ -227,7 +225,7 @@
     font-size: 1.1rem;
   }
 
-  .footer__social-element {
+  .footer__social-link {
     width: $footer-social-element-size;
     height: $footer-social-element-size;
     line-height: $footer-social-element-size;

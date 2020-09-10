@@ -1,12 +1,8 @@
+import $ from 'jquery';
+import { identifiers, selectors } from './handles';
 import '../scss/style.scss';
 import '../img/1.jpg';
-
-const $ = require('jquery');
-
-const {
-  identifiers,
-  selectors
-} = require('./handles.js');
+import '../img/react.png';
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
@@ -21,52 +17,64 @@ const copyInfo = document.getElementById(identifiers.copyInfoId);
 
 const partsOfPage = document.querySelectorAll(selectors.partsOfPageSelector);
 const technologies = document.querySelectorAll(selectors.technologiesSelector);
-const listOfPageParts = document.querySelectorAll(selectors.listOfPagePartsSelector);
+const listOfPageParts = document.querySelectorAll(
+  selectors.listOfPagePartsSelector
+);
 
 let currentPartOfPage = 0;
 
-function checkScrollPosition() {
+const checkScrollPosition = () => {
   const scrollPosition = window.pageYOffset;
-  technologies.forEach(technology => {
+  technologies.forEach((technology) => {
     if (scrollPosition + window.innerHeight > $(technology).offset().top) {
-      technology.classList.add('my-technologies__technology--scrolled')
+      technology.classList.add('my-technologies__technology--scrolled');
     }
-  })
+  });
   partsOfPage.forEach((partOfPage, i) => {
     if (scrollPosition > $(partOfPage).offset().top - 50) {
-      listOfPageParts[currentPartOfPage].classList.remove('nav__list-item--actual');
+      listOfPageParts[currentPartOfPage].classList.remove(
+        'nav__list-item--actual'
+      );
       currentPartOfPage = i;
-      listOfPageParts[currentPartOfPage].classList.add('nav__list-item--actual');
+      listOfPageParts[currentPartOfPage].classList.add(
+        'nav__list-item--actual'
+      );
     }
-  })
-}
+  });
+};
 openBurger.addEventListener('click', () => {
   navList.classList.add('nav__list--open');
   openBurger.classList.remove('nav__open-menu--active');
   closeBurger.classList.add('nav__close-menu--active');
-})
+});
 
 closeBurger.addEventListener('click', () => {
   navList.classList.remove('nav__list--open');
   openBurger.classList.add('nav__open-menu--active');
   closeBurger.classList.remove('nav__close-menu--active');
-})
+});
 
 skillButton.addEventListener('click', () => {
-  $('body, html').animate({
-    scrollTop: $(partsOfPage[1]).offset().top
-  }, 1000)
-})
+  $('body, html').animate(
+    {
+      scrollTop: $(partsOfPage[1]).offset().top,
+    },
+    1000
+  );
+});
 
-window.addEventListener('scroll', checkScrollPosition)
+window.addEventListener('scroll', checkScrollPosition);
 
 listOfPageParts.forEach((item, i) => {
   item.addEventListener('click', () => {
-    $('body, html').animate({
-      scrollTop: $(partsOfPage[i]).offset().top
-    }, 1000)
-  })
-})
+    $('body, html').animate(
+      {
+        scrollTop: $(partsOfPage[i]).offset().top,
+      },
+      1000
+    );
+  });
+});
 
 copyButton.addEventListener('click', () => {
   const textarea = document.createElement('textarea');
@@ -79,6 +87,6 @@ copyButton.addEventListener('click', () => {
   copyInfo.classList.add('footer__copy-info--visible');
   setTimeout(() => {
     copyInfo.classList.remove('footer__copy-info--visible');
-  }, 2000)
-})
-checkScrollPosition()
+  }, 2000);
+});
+checkScrollPosition();

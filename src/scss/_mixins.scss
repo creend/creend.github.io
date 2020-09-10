@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 
-@mixin before($top, $right, $bottom, $left) {
+@mixin pseudoelement($top, $right, $bottom, $left) {
   position: absolute;
   content: '';
   top: $top;

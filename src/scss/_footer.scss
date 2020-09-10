@@ -1,15 +1,19 @@
 .footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
   background-color: #1f1f1f;
-  margin-top: 3rem;
+  margin-top: 4rem;
 
   &__social-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    margin-top: 10px;
   }
 
-  &__social-element {
+  &__social-link {
     display: block;
     box-sizing: content-box;
     background-color: #363636;
@@ -20,11 +24,15 @@
     text-align: center;
     border-radius: 5px;
     border: 0;
-    transition: .3s background-color;
+    transition: 0.3s background-color;
     cursor: pointer;
 
     &--yt:hover {
       background-color: #cf312e;
+    }
+
+    &--gh:hover {
+      background-color: #24292e;
     }
 
     &--fb:hover {
@@ -46,12 +54,11 @@
 
   &__copy-info {
     transform: scale(0);
-    font-family: 'Varela Round',
-      sans-serif;
+    font-family: 'Varela Round', sans-serif;
     color: white;
     text-align: center;
     padding: 20px;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     &--visible {
       transform: scale(1);
@@ -67,8 +74,7 @@
 
   &__created-info {
     text-align: center;
-    font-family: 'Varela Round',
-      sans-serif;
+    font-family: 'Varela Round', sans-serif;
     color: white;
     padding: 20px;
     background-color: #363636;
