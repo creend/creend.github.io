@@ -1,0 +1,29 @@
+.hamburger-icon{
+  padding: 5px;
+  width: 45px;
+  height: 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items: center;
+  cursor:pointer;
+  &__bar{
+    transform-origin:0 50%;
+    display:block;
+    width: 35px;
+    height: 5px;
+    overflow:hidden;
+    background-color: black;
+    transition: .3s transform;
+  }
+  &__bar--clicked:nth-child(1){
+    transform:rotate(45deg);
+  }
+  &__bar--clicked:nth-child(2){
+    transform:translateX(-100%);
+    opacity:0;
+  }
+  &__bar--clicked:nth-child(3){
+    transform:rotate(-45deg);
+  }
+}

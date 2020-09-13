@@ -8,18 +8,16 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-const openBurger = document.getElementById(identifiers.openBurgerId);
-const closeBurger = document.getElementById(identifiers.closeBurgerId);
+const burger = document.getElementById(identifiers.burger);
 const navList = document.getElementById(identifiers.navListId);
 const skillButton = document.getElementById(identifiers.skillButtonId);
 const copyButton = document.getElementById(identifiers.copyButtonId);
 const copyInfo = document.getElementById(identifiers.copyInfoId);
 
+const burgerBars = document.querySelectorAll(selectors.burgerBars)
 const partsOfPage = document.querySelectorAll(selectors.partsOfPageSelector);
 const technologies = document.querySelectorAll(selectors.technologiesSelector);
-const listOfPageParts = document.querySelectorAll(
-  selectors.listOfPagePartsSelector
-);
+const listOfPageParts = document.querySelectorAll(selectors.listOfPagePartsSelector);
 
 let currentPartOfPage = 0;
 
@@ -32,34 +30,24 @@ const checkScrollPosition = () => {
   });
   partsOfPage.forEach((partOfPage, i) => {
     if (scrollPosition > $(partOfPage).offset().top - 50) {
-      listOfPageParts[currentPartOfPage].classList.remove(
-        'nav__list-item--actual'
-      );
+      listOfPageParts[currentPartOfPage].classList.remove('nav__list-item--actual');
       currentPartOfPage = i;
-      listOfPageParts[currentPartOfPage].classList.add(
-        'nav__list-item--actual'
-      );
+      listOfPageParts[currentPartOfPage].classList.add('nav__list-item--actual');
     }
   });
 };
-openBurger.addEventListener('click', () => {
-  navList.classList.add('nav__list--open');
-  openBurger.classList.remove('nav__open-menu--active');
-  closeBurger.classList.add('nav__close-menu--active');
-});
 
-closeBurger.addEventListener('click', () => {
-  navList.classList.remove('nav__list--open');
-  openBurger.classList.add('nav__open-menu--active');
-  closeBurger.classList.remove('nav__close-menu--active');
-});
+burger.addEventListener('click', ()=>{
+  navList.classList.toggle('nav__list--open');
+  burgerBars.forEach(bar => {
+    bar.classList.toggle('hamburger-icon__bar--clicked');
+  })
+})
 
 skillButton.addEventListener('click', () => {
-  $('body, html').animate(
-    {
+  $('body, html').animate({
       scrollTop: $(partsOfPage[1]).offset().top,
-    },
-    1000
+    },1000
   );
 });
 

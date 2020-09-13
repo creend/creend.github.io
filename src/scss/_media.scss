@@ -66,6 +66,16 @@
     transform: translateY($header-height);
   }
 
+  .hamburger-icon{
+    width: 55px;
+    height: 50px;
+  }
+
+  .hamburger-icon__bar{
+    width: 45px;
+    height: 7px;
+  }
+
   .about-section__title {
     font-size: 2.5rem;
   }
@@ -114,8 +124,7 @@
     }
   }
 
-  .nav__open-menu,
-  .nav__close-menu {
+  .hamburger-icon {
     display: none;
   }
 

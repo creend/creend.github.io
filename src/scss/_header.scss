@@ -61,20 +61,4 @@
       display: block;
     }
   }
-
-  &__open-menu {
-    @include hamburger-menu();
-
-    &--active {
-      display: block;
-    }
-  }
-
-  &__close-menu {
-    @include hamburger-menu();
-
-    &--active {
-      display: block;
-    }
-  }
 }

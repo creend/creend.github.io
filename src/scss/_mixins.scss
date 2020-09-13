@@ -1,9 +1,3 @@
-@mixin hamburger-menu() {
-  font-size: 2rem;
-  display: none;
-  cursor: pointer;
-}
-
 @mixin pseudoelement($top, $right, $bottom, $left) {
   position: absolute;
   content: '';
