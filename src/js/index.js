@@ -2,7 +2,6 @@ import $ from 'jquery';
 import { identifiers, selectors } from './handles';
 import '../scss/style.scss';
 import '../img/1.jpg';
-import '../img/react.png';
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
@@ -37,7 +36,11 @@ const checkScrollPosition = () => {
   });
 };
 
-burger.addEventListener('click', ()=>{
+checkScrollPosition();
+
+window.addEventListener('scroll', checkScrollPosition);
+
+burger.addEventListener('click', () => {
   navList.classList.toggle('nav__list--open');
   burgerBars.forEach(bar => {
     bar.classList.toggle('hamburger-icon__bar--clicked');
@@ -50,8 +53,6 @@ skillButton.addEventListener('click', () => {
     },1000
   );
 });
-
-window.addEventListener('scroll', checkScrollPosition);
 
 listOfPageParts.forEach((item, i) => {
   item.addEventListener('click', () => {
@@ -77,4 +78,4 @@ copyButton.addEventListener('click', () => {
     copyInfo.classList.remove('footer__copy-info--visible');
   }, 2000);
 });
-checkScrollPosition();
+
