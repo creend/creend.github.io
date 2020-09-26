@@ -1,13 +1,13 @@
 export const identifiers = {
-  burger: 'burger',
+  burgerId: 'burger',
   navListId: 'nav',
   skillButtonId: 'skill-button',
   copyButtonId: 'copy-button',
   copyInfoId: 'copy-info',
 };
 export const selectors = {
-  burgerBars:'[js-data="burger-bar"]',
-  partsOfPageSelector: '[js-data="page-part"]',
-  technologiesSelector: '[js-data="technology"]',
-  listOfPagePartsSelector: '[js-data="list-of-page-parts"]',
+  burgerBars:'[data-burger-bar]',
+  partsOfPageSelector: '[data-page-part]',
+  technologiesSelector: '[data-technology]',
+  listOfPagePartsSelector: '[data-list-item]',
 };

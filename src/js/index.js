@@ -7,7 +7,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-const burger = document.getElementById(identifiers.burger);
+const burger = document.getElementById(identifiers.burgerId);
 const navList = document.getElementById(identifiers.navListId);
 const skillButton = document.getElementById(identifiers.skillButtonId);
 const copyButton = document.getElementById(identifiers.copyButtonId);
