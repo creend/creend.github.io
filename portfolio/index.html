@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous" />
+  <link rel="stylesheet" href="dist/main.css" />
+  <script defer src="dist/bundle.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__text">Creend</h1>
+    <nav class="nav">
+      <ul id="nav" class="nav__list">
+        <li data-list-item class="nav__list-item nav__list-item--actual">
+          Początek
+        </li>
+        <li data-list-item class="nav__list-item">
+          Umiejętności
+        </li>
+        <li data-list-item class="nav__list-item">Stopka</li>
+      </ul>
+      <div class="hamburger-icon" id="burger">
+        <div data-burger-bar class="hamburger-icon__bar"></div>
+        <div data-burger-bar class="hamburger-icon__bar"></div>
+        <div data-burger-bar class="hamburger-icon__bar"></div>
+      </div>
+    </nav>
+  </header>
+  <section data-page-part class="about-section">
+    <div class="about-section__info">
+      <h1 class="about-section__title">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+        unde quod.
+      </h1>
+      <h2 class="about-section__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h2>
+      <button id="skill-button" class="button">Umiejętności</button>
+    </div>
+  </section>
+  <article data-page-part class="my-technologies">
+    <h2 class="title">Umiejętności</h2>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-html5 my-technologies__icon my-technologies__icon--html"></i>
+      <h3 class="my-technologies__technology-name">HTML 5</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-css3 my-technologies__icon my-technologies__icon--css"></i>
+      <h3 class="my-technologies__technology-name">CSS</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-sass my-technologies__icon my-technologies__icon--scss"></i>
+      <h3 class="my-technologies__technology-name">SCSS</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fas fa-mobile-alt my-technologies__icon my-technologies__icon--phone"></i>
+      <h3 class="my-technologies__technology-name">RWD</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-js my-technologies__icon my-technologies__icon--js"></i>
+      <h3 class="my-technologies__technology-name">JS ES6+</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-react my-technologies__icon my-technologies__icon--react"></i>
+      <h3 class="my-technologies__technology-name">React.js</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fas fa-book my-technologies__icon my-technologies__icon--jquery"></i>
+      <h3 class="my-technologies__technology-name">JQuery</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+    <section data-technology class="my-technologies__technology">
+      <i class="fab fa-node-js my-technologies__icon my-technologies__icon--node"></i>
+      <h3 class="my-technologies__technology-name">NodeJs (ExpressJS)</h3>
+      <p class="my-technologies__techology-description">
+        Lorem ipsum dolor sit amet, consectetur
+      </p>
+    </section>
+  </article>
+  <footer data-page-part class="footer">
+    <div class="footer__social-container">
+      <a href="https://www.facebook.com/creend.clashroyale.1/" target="_blank"
+        class="footer__social-link footer__social-link--fb"><i class="fab fa-facebook-f footer__social-icon"></i></a>
+      <a class="footer__social-link footer__social-link--yt" target="_blank"
+        href="https://www.youtube.com/channel/UCBWoXNT5U8Tam5EKBYgE9lw?view_as=subscriber">
+        <i class="fab fa-youtube footer__social-icon"></i>
+      </a>
+      <a class="footer__social-link footer__social-link--gh" target="_blank" href="https://github.com/creend"><i
+          class="fab fa-github footer__social-icon"></i></a>
+      <button id="copy-button" class="footer__social-link footer__social-link--mail">
+        <i id="email" class="fas fa-envelope footer__social-icon"></i>
+      </button>
+    </div>
+    <p class="footer__copy-info" id="copy-info">E-mail skopiowany</p>
+    <h1 class="footer__page-name">Portfolio</h1>
+    <p class="footer__created-info">Created By Creend 2020</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+@media (max-height:550px) {
+  .about-section__title {
+    font-size: 1.75rem;
+  }
+
+  .about-section__description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-height:500px) {
+  .about-section__title {
+    font-size: 1.6rem;
+  }
+
+  .about-section__description {
+    font-size: 1.1rem;
+  }
+}
+
+@media(max-height:460px) {
+  .about-section__title {
+    font-size: 1.4rem;
+  }
+
+  .about-section__description {
+    font-size: 0.9rem;
+  }
+}
+
+@media(max-height:432px) {
+  .about-section__title {
+    font-size: 1.25rem;
+  }
+
+  .about-section__description {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    padding: 8px 20px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width:300px) {
+  $footer-social-element-size: 45px;
+
+  .footer__social-link {
+    width: $footer-social-element-size;
+    height: $footer-social-element-size;
+    line-height: $footer-social-element-size;
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width:576px) {
+  $header-height: 50px;
+  $footer-social-element-size: 50px;
+
+  .header {
+    height: $header-height;
+  }
+
+  .nav__list--open {
+    transform: translateY($header-height);
+  }
+
+  .hamburger-icon{
+    width: 55px;
+    height: 50px;
+  }
+
+  .hamburger-icon__bar{
+    width: 45px;
+    height: 7px;
+  }
+
+  .about-section__title {
+    font-size: 2.5rem;
+  }
+
+  .about-section__description {
+    font-size: 1.5rem;
+    padding: 30px;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+
+  .my-technologies {
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+
+    &__technology {
+      flex-basis: 40%;
+      min-height: 260px;
+    }
+  }
+  .title{
+    flex-basis: 100%;
+  }
+
+  .footer__social-element {
+    width: $footer-social-element-size;
+    height: $footer-social-element-size;
+    line-height: $footer-social-element-size;
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width:768px) {
+  $header-height: 55px;
+
+  .header {
+    height: $header-height;
+
+    &__text {
+      font-size: 1.6rem;
+    }
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  // New Navigation
+  .nav__list {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    background-color: transparent;
+    transform: translateY(0);
+    flex-direction: row;
+  }
+
+  .nav__list-item {
+    position: relative;
+    color: #003049;
+    border-bottom: none;
+    font-size: 1.1rem;
+    transition: .3s;
+    overflow: hidden;
+
+    &--actual {
+      color: #8babff;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: #8babff;
+    }
+
+    &::before {
+      @include pseudoelement(auto, auto, 0, 0);
+      display: block;
+      width: 100%;
+      height: 2px;
+      transform: translateX(-101%);
+      background-color: #8babff;
+      transition: transform .3s;
+    }
+
+    &:hover::before {
+      transform: translateX(0);
+    }
+  }
+
+  // End Of Coding New Navigation
+
+  .about-section__title {
+    font-size: 2.8rem;
+  }
+
+  .about-section__description {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width:992px) {
+  $header-height: 65px;
+
+  .header {
+    height: $header-height;
+
+    &__text {
+      font-size: 2rem;
+    }
+  }
+
+  .nav__list-item {
+    font-size: 1.25rem;
+  }
+
+  .about-section__title {
+    font-size: 3rem;
+  }
+
+  .about-section__description {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1.75rem;
+    padding: 20px 35px;
+  }
+
+  .my-technologies__technology {
+    flex-basis: 30%;
+  }
+}
+
+@media (min-width:1250px) {
+  $footer-social-element-size: 60px;
+  .title {
+    font-size: 2.5rem;
+    
+  }
+    .my-technologies__technology {
+    flex-basis: 22%;
+    min-height: 280px;
+  }
+
+  .my-technologies__technology-name {
+    font-size: 1.5rem;
+  }
+
+  .my-technologies__techology-description {
+    font-size: 1.1rem;
+  }
+
+  .footer__social-link {
+    width: $footer-social-element-size;
+    height: $footer-social-element-size;
+    line-height: $footer-social-element-size;
+  }
+
+  .footer__copy-info {
+    font-size: 1.3rem;
+  }
+
+  .footer__created-info {
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width:1600px) {
+  .about-section__title {
+    font-size: 3.5rem;
+  }
+
+  .about-section__description {
+    font-size: 2.4rem;
+  }
+}

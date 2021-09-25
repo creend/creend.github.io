@@ -1,0 +1,94 @@
+.my-technologies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__technology {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    margin-top: 3rem;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgba(220, 220, 220, 0.5);
+    min-height: 250px;
+    overflow: hidden;
+    transition: 0.75s transform, color;
+    transform: translateX(-100%);
+
+    &--scrolled {
+      transform: translateX(0);
+    }
+
+    &::before {
+      @include pseudoelement(0, auto, auto, 0);
+      z-index: -1;
+      background-color: #03071e;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-102%);
+      transition: 0.3s transform;
+    }
+
+    &:hover::before {
+      transform: translateX(0%);
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+    margin-top: 2rem;
+
+    &--html {
+      color: #e26415;
+    }
+
+    &--css {
+      color: #3e66f8;
+    }
+
+    &--js {
+      color: #f3df00;
+    }
+
+    &--scss {
+      color: #c3679d;
+    }
+
+    &--react {
+      color: #80dbfe;
+    }
+
+    &--jquery {
+      color: #2e69b0;
+    }
+
+    &--node {
+      color: #689f63;
+    }
+
+    &--phone {
+      color: gold;
+    }
+  }
+
+  &__technology-name {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &__techology-description {
+    margin-top: 2rem;
+    color: #868f9b;
+    text-align: center;
+  }
+}

@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  font-size: 1rem;
+  font-family: 'Varela Round',
+    sans-serif;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 35px;
+  transition: .3s color;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    color: black;
+  }
+
+  &::before {
+    @include pseudoelement(0, auto, 0, 0);
+    width: 100%;
+    transform: translateX(-101%);
+    background-color: white;
+    transition: .3s transform;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    transform: translateX(0);
+  }
+}

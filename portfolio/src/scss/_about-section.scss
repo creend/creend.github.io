@@ -1,0 +1,31 @@
+.about-section {
+  position: relative;
+  background-image: url('../img/1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  padding-top: $header-height;
+
+  &__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  &__description {
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    font-family: 'Varela Round', sans-serif;
+  }
+}
