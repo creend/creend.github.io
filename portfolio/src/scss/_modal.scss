@@ -1,0 +1,113 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+  &--opened {
+    display: block;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translate(-300%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal {
+  animation: appear 0.5s;
+  width: 90%;
+  max-width: 1100px;
+  min-height: 600px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+
+  &__close-btn {
+    padding: 5px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  &__close-icon {
+    font-size: 2rem;
+    color: #ff0000;
+  }
+  &__img {
+    background-position: center;
+    //height: 100%;
+    border-radius: 50px 0 0 50px;
+    width: 30%;
+    &--rps {
+      background-image: url("../img/rps.png");
+    }
+    &--files {
+      background-image: url("../img/files.png");
+    }
+  }
+  &__info {
+    max-width: 65%;
+    padding: 45px;
+  }
+  &__title {
+    font-size: 3rem;
+  }
+  &__paragraph {
+    font-size: 1.4rem;
+    &--links {
+      margin-top: 50px;
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+  &__list {
+    padding-left: 40px;
+  }
+  &__list-item {
+    font-size: 1.3rem;
+  }
+  &__links {
+    margin-top: 30px;
+    margin-left: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px 50px;
+    width: 180px;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0 40px;
+    background-color: transparent;
+    transition: 0.3s background-color, color;
+    &--frontend {
+      background-color: #61dafb;
+    }
+    &--backend {
+      background-color: #e0234e;
+    }
+  }
+}

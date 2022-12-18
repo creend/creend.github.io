@@ -1,4 +1,4 @@
-@media (max-height:550px) {
+@media (max-height: 550px) {
   .about-section__title {
     font-size: 1.75rem;
   }
@@ -8,7 +8,7 @@
   }
 }
 
-@media (max-height:500px) {
+@media (max-height: 500px) {
   .about-section__title {
     font-size: 1.6rem;
   }
@@ -18,7 +18,7 @@
   }
 }
 
-@media(max-height:460px) {
+@media (max-height: 460px) {
   .about-section__title {
     font-size: 1.4rem;
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@media(max-height:432px) {
+@media (max-height: 432px) {
   .about-section__title {
     font-size: 1.25rem;
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@media (min-width:300px) {
+@media (min-width: 300px) {
   $footer-social-element-size: 45px;
 
   .footer__social-link {
@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width:576px) {
+@media (min-width: 576px) {
   $header-height: 50px;
   $footer-social-element-size: 50px;
 
@@ -66,12 +66,12 @@
     transform: translateY($header-height);
   }
 
-  .hamburger-icon{
+  .hamburger-icon {
     width: 55px;
     height: 50px;
   }
 
-  .hamburger-icon__bar{
+  .hamburger-icon__bar {
     width: 45px;
     height: 7px;
   }
@@ -101,7 +101,7 @@
       min-height: 260px;
     }
   }
-  .title{
+  .title {
     flex-basis: 100%;
   }
 
@@ -113,7 +113,7 @@
   }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   $header-height: 55px;
 
   .header {
@@ -144,7 +144,7 @@
     color: #003049;
     border-bottom: none;
     font-size: 1.1rem;
-    transition: .3s;
+    transition: 0.3s;
     overflow: hidden;
 
     &--actual {
@@ -163,7 +163,7 @@
       height: 2px;
       transform: translateX(-101%);
       background-color: #8babff;
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
     &:hover::before {
@@ -182,7 +182,7 @@
   }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
   $header-height: 65px;
 
   .header {
@@ -215,13 +215,40 @@
   }
 }
 
-@media (min-width:1250px) {
+@media (max-width: 800px) {
+  .modal__links {
+    flex-direction: column;
+  }
+  .modal__button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .modal__paragraph {
+    display: none;
+    &--tech-stack {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 950px) {
+  .projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .project {
+    margin: 20px 50px;
+  }
+}
+
+@media (min-width: 1250px) {
   $footer-social-element-size: 60px;
   .title {
     font-size: 2.5rem;
-    
   }
-    .my-technologies__technology {
+  .my-technologies__technology {
     flex-basis: 22%;
     min-height: 280px;
   }
@@ -249,7 +276,7 @@
   }
 }
 
-@media(min-width:1600px) {
+@media (min-width: 1600px) {
   .about-section__title {
     font-size: 3.5rem;
   }

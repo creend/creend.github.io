@@ -1,7 +1,7 @@
-import $ from 'jquery';
-import { identifiers, selectors } from './handles';
-import '../scss/style.scss';
-import '../img/1.jpg';
+import $ from "jquery";
+import { identifiers, selectors } from "./handles";
+import "../scss/style.scss";
+import "../img/1.jpg";
 
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
@@ -13,50 +13,89 @@ const skillButton = document.getElementById(identifiers.skillButtonId);
 const copyButton = document.getElementById(identifiers.copyButtonId);
 const copyInfo = document.getElementById(identifiers.copyInfoId);
 
-const burgerBars = document.querySelectorAll(selectors.burgerBars)
+const rpsAppBackdrop = document.getElementById(identifiers.rpsAppBackdropId);
+const filesAppBackdrop = document.getElementById(
+  identifiers.filesAppBackdropId
+);
+const openFilesAppModalBtn = document.getElementById(
+  identifiers.openFilesAppModal
+);
+const openRpsAppModalBtn = document.getElementById(identifiers.openRpsAppModal);
+const closeRpsAppModalBtn = document.getElementById(
+  identifiers.closeRpsAppModalButtonId
+);
+const closeFilesAppModalBtn = document.getElementById(
+  identifiers.closeFilesAppModalButtonId
+);
+
+const burgerBars = document.querySelectorAll(selectors.burgerBars);
 const partsOfPage = document.querySelectorAll(selectors.partsOfPageSelector);
 const technologies = document.querySelectorAll(selectors.technologiesSelector);
-const listOfPageParts = document.querySelectorAll(selectors.listOfPagePartsSelector);
+const listOfPageParts = document.querySelectorAll(
+  selectors.listOfPagePartsSelector
+);
 
 let currentPartOfPage = 0;
 
+openRpsAppModalBtn.addEventListener("click", () => {
+  rpsAppBackdrop.classList.add("backdrop--opened");
+});
+
+closeRpsAppModalBtn.addEventListener("click", () => {
+  rpsAppBackdrop.classList.remove("backdrop--opened");
+});
+
+openFilesAppModalBtn.addEventListener("click", () => {
+  filesAppBackdrop.classList.add("backdrop--opened");
+});
+
+closeFilesAppModalBtn.addEventListener("click", () => {
+  filesAppBackdrop.classList.remove("backdrop--opened");
+});
+
 const checkScrollPosition = () => {
-  const scrollPosition = window.pageYOffset;
+  const scrollPosition = window.scrollY;
   technologies.forEach((technology) => {
     if (scrollPosition + window.innerHeight > $(technology).offset().top) {
-      technology.classList.add('my-technologies__technology--scrolled');
+      technology.classList.add("my-technologies__technology--scrolled");
     }
   });
   partsOfPage.forEach((partOfPage, i) => {
     if (scrollPosition > $(partOfPage).offset().top - 50) {
-      listOfPageParts[currentPartOfPage].classList.remove('nav__list-item--actual');
+      listOfPageParts[currentPartOfPage].classList.remove(
+        "nav__list-item--actual"
+      );
       currentPartOfPage = i;
-      listOfPageParts[currentPartOfPage].classList.add('nav__list-item--actual');
+      listOfPageParts[currentPartOfPage].classList.add(
+        "nav__list-item--actual"
+      );
     }
   });
 };
 
 checkScrollPosition();
 
-window.addEventListener('scroll', checkScrollPosition);
+window.addEventListener("scroll", checkScrollPosition);
 
-burger.addEventListener('click', () => {
-  navList.classList.toggle('nav__list--open');
-  burgerBars.forEach(bar => {
-    bar.classList.toggle('hamburger-icon__bar--clicked');
-  })
-})
+burger.addEventListener("click", () => {
+  navList.classList.toggle("nav__list--open");
+  burgerBars.forEach((bar) => {
+    bar.classList.toggle("hamburger-icon__bar--clicked");
+  });
+});
 
-skillButton.addEventListener('click', () => {
-  $('body, html').animate({
+skillButton.addEventListener("click", () => {
+  $("body, html").animate(
+    {
       scrollTop: $(partsOfPage[1]).offset().top,
-    },1000
+    },
+    1000
   );
 });
 
 listOfPageParts.forEach((item, i) => {
-  item.addEventListener('click', () => {
-    $('body, html').animate(
+  item.addEventListener("click", () => {
+    $("body, html").animate(
       {
         scrollTop: $(partsOfPage[i]).offset().top,
       },
@@ -65,17 +104,16 @@ listOfPageParts.forEach((item, i) => {
   });
 });
 
-copyButton.addEventListener('click', () => {
-  const textarea = document.createElement('textarea');
-  const myEmail = 'creend42@gmail.com';
+copyButton.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const myEmail = "creend42@gmail.com";
   textarea.value = myEmail;
   document.body.appendChild(textarea);
   textarea.select();
-  document.execCommand('copy');
+  document.execCommand("copy");
   document.body.removeChild(textarea);
-  copyInfo.classList.add('footer__copy-info--visible');
+  copyInfo.classList.add("footer__copy-info--visible");
   setTimeout(() => {
-    copyInfo.classList.remove('footer__copy-info--visible');
+    copyInfo.classList.remove("footer__copy-info--visible");
   }, 2000);
 });
-
